@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .hideF{
+            overflow: hidden;
+          }
+        }
+        @layer base {
+            *{
+                @apply m-0 p-0 box-border;
+            }
+        }
+        @layer components {
+            .wrapper{
+            @apply min-h-full w-full flex flex-col hideF;
+          }
+          .textHeader{
+            @apply text-[15px] font-medium text-white;
+          }
+        }
+      </style>
+    <title>Document</title>
+</head>
+
+<body class="bg-gradient-to-r from-pink-300 to-blue-300">
+    <div class="wrapper">
+        <header class="header">
+            <div class="flex justify-around w-full bg-black items-center">
+                <div class="flex items-center">
+                    <span class="text-[25px] font-bold text-white cursor-pointer">D</span>
+                    <nav class="flex gap-[15px] ml-[25px] scale-[0.8] md:scale-[1]">
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Поиск</a>
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Акции</a>
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Личный кабинет</a>
+                        <div class="flex md:hidden">
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Регистрация</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#"
+                        class="py-[5px] px-[15px]  bg-gradient-to-r from-pink-300 to-blue-300 rounded-[15px] textHeader font-medium hover:text-gray-300 duration-200">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main
+            class="w-full flex flex-col h-screen mt-[37.5px] bg-gradient-to-r from-pink-300 to-blue-300 items-center ">
+
+            <div class="flex max-w-[1000px] h-[700px] bg-white w-full mt-[50px] rounded-[40px] justify-center">
+                <div class="flex flex-col mt-[50px] items-center">
+                    <img src="./media/car2.png" alt="Car" class="max-w-[400px] w-full">
+                    <span
+                        class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[25px]">Kia
+                        Rio</span>
+                    <span
+                        class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[10px]">kia
+                        sport 2012</span>
+                    <span
+                        class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[10px]">Дата:
+                        28.09.2024</span>
+                    <span
+                        class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[10px]">Время:
+                        18:15</span>
+                    <div class="flex w-full flex-col items-center justify-center">
+                        <span
+                            class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[10px]">Стоимость:
+                            22.000</span>
+                            <span
+                            class="text-[25px] font-bold bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] py-[3px] px-[10px] text-white drop-shadow-xl mt-[10px] ml-[15px]">Вероятность:
+                            100%</span>
+                    </div>
+                    <button class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] mt-[20px] bg-gradient-to-r from-blue-300 to-pink-300 hover:text-gray-300 duration-200">Далее</button>
+                </div>
+            </div>
+        </main>
+        <div class="h-[100px] bg-gradient-to-r from-pink-300 to-blue-300"></div>
+        <footer class="w-full flex justify-around mt-[120px] mb-[15px] scale-[0.8] md:scale-[1]">
+            <nav class="flex gap-[15px]">
+                <a href="#" class="textHeader text-black">Телефон 8 (800) 555-35-35 </a>
+                <a href="#" class="textHeader text-black">Акции</a>
+                <a href="#" class="textHeader text-black">Регистрация</a>
+                <a href="#" class="textHeader text-black">Личный Кабинет</a>
+                <a href="#" class="textHeader text-black">Поиск</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

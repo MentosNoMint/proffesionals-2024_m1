@@ -1,0 +1,98 @@
+body {
+    font-family: "Gill Sans Extrabold", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    transition: transform 0.1s linear;
+    z-index: 10;
+}
+
+
+header.hide {
+    margin-top: -37.5px;
+
+}
+
+/* .check{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 100px orange;
+} */
+
+.item {
+    display: none;
+}
+
+.des {
+    display: none;
+}
+
+.item:nth-child(1),
+.des:nth-child(1) {
+    animation: opa 1s;
+    display: flex;
+}
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.name {
+    opacity: 0;
+}
+
+.desBtn {
+    opacity: 0;
+}
+
+.desName {
+    opacity: 0;
+}
+
+.des .name {
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.des .desBtn {
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.des .desName {
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+
+
+.sticky{
+    position: sticky;
+    top: 20px;
+}
+
+.checkB{
+    height: 1000px;
+}

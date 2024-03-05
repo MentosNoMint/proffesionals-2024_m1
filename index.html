@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .hideF{
+            overflow: hidden;
+          }
+        }
+        @layer base {
+            *{
+                @apply m-0 p-0 box-border;
+            }
+        }
+        @layer components {
+            .wrapper{
+            @apply min-h-full w-full flex flex-col hideF;
+          }
+          .textHeader{
+            @apply text-[15px] font-medium text-white;
+          }
+        }
+      </style>
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="flex justify-around w-full bg-black items-center">
+                <div class="flex items-center">
+                    <span class="text-[25px] font-bold text-white cursor-pointer">D</span>
+                    <nav class="flex gap-[15px] ml-[25px] scale-[0.8] md:scale-[1]">
+                        <a href="#"
+                            class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Поиск</a>
+                        <a href="#"
+                            class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">акции</a>
+                        <a href="#"
+                            class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Личный
+                            кабинет</a>
+                        <div class="flex md:hidden">
+                            <a href="#"
+                                class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Регистрация</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#"
+                        class="py-[5px] px-[15px]  bg-gradient-to-r from-pink-300 to-blue-300 rounded-[15px] textHeader font-medium hover:text-gray-300 duration-200">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main class="flex w-full flex-col mt-[37.5px] bg-gradient-to-r from-pink-300 to-blue-300">
+            <div class="flex w-full justify-center bg-gradient-to-r from-pink-300 to-blue-300 rounded-t-[35px]">
+
+                <div class="flex flex-col items-center">
+                    <h1 class="text-[40px] font-bold mt-[25px] text-white drop-shadow-xl scale-[0.8]  ml-[20px] md:scale-[1] md:text-[50px] md:ml-[0px]">
+                        Выбери свой автомобиль сам</h1>
+                    <div class="mt-[50px] flex flex-col slide">
+                        <div class="w-[500px] h-[300px] bg-cover item" style="background-image: url(./media/car1.png);">
+                        </div>
+                        <div class="w-[520px] h-[300px] bg-cover item" style="background-image: url(./media/car2.png);">
+
+                        </div>
+
+                    </div>
+
+                    <div class="desDlise">
+                        <div class="mt-[15px] des">
+                            <div
+                                class="w-[500px] h-[120px] border-[1px] rounded-[25px] flex flex-col items-center drop-shadow-xl bg-gradient-to-r from-orange-300 to-pink-300 scale-[0.8]">
+                                <p class="text-[20px] text-white drop-shadow-xl font-bold name">LADA VESTA</p>
+                                <span class="text-[15px] font-medium text-white my-[10px] desName">быстрый , комфортный
+                                    автомобиль</span>
+                                <button
+                                    class=" rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] hover:text-gray-300 duration-200 desBtn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="mt-[15px] des">
+                            <div
+                                class="w-[500px] h-[120px] border-[1px] rounded-[25px] flex flex-col items-center drop-shadow-xl bg-gradient-to-r from-blue-400 to-pink-300">
+                                <p class="text-[20px] text-white drop-shadow-xl font-bold name">KIA</p>
+                                <span class="text-[15px] font-medium text-white my-[10px] desName">быстрый , комфортный
+                                    автомобиль</span>
+                                <button
+                                    class=" rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] hover:text-gray-300 duration-200 desBtn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[45px] btn">
+                        <button
+                            class="border-[1px] border-white py-[5px] px-[20px] rounded-[15px] drop-shadow-xl text-white font-medium mr-[15px] next hover:text-gray-300 duration-200">Просмотр</button>
+                    </div>
+                    <div class="my-[50px] w-full flex h-[2px] bg-gray-200">
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex bg-gradient-to-r from-pink-300 to-blue-300 checkB">
+                <div class="w-full flex justify-around flex-col  items-center md:flex-row md:items-start checkB">
+                    <p
+                        class="text-[45px] font-bold text-white drop-shadow-xl stick">
+                        Почему мы?</p>
+                    <div class="max-w-[300px] w-full flex items-center flex-col">
+                        <p
+                            class="text-[35px] font-bold  text-white drop-shadow-xl">
+                            Отзывы</p>
+                        <div
+                            class="max-w-[300px] h-[120px] border-[1px] w-full rounded-[15px] bg-gradient-to-r from-pink-300 to-blue-300 flex flex-col items-center mt-[35px]">
+                            <div class="flex items-center flex-col">
+                                <img src="./media/Tanzania-2300w_1_1.png" alt="Photo"
+                                    class="rounded-[150px] w-[45px] h-[45px] mt-[5px]">
+                                <span class="text-[15px] font-bold text-white">Широков Кирилл</span>
+                            </div>
+                            <div class="max-w-[120px] h-[1px] bg-gray-200 w-full my-[5px]"></div>
+                            <div class="flex ">
+                                <span class="text-white font-medium text-[20px]">Лучший сервис!</span>
+                            </div>
+                        </div>
+                        <div
+                            class="max-w-[300px] h-[120px] border-[1px] w-full rounded-[15px] bg-gradient-to-r from-pink-300 to-blue-300 flex flex-col items-center mt-[35px]">
+                            <div class="flex items-center flex-col">
+                                <img src="./media/Tanzania-2300w_1_2.png" alt="Photo"
+                                    class="rounded-[150px] w-[45px] h-[45px] mt-[5px]">
+                                <span class="text-[15px] font-bold text-white">Зайцев Николай</span>
+                            </div>
+                            <div class="max-w-[120px] h-[1px] bg-gray-200 w-full my-[5px]"></div>
+                            <div class="flex ">
+                                <span class="text-white font-medium text-[20px]">Топ как всегда</span>
+                            </div>
+                        </div>
+                        <div
+                            class="max-w-[300px] h-[120px] border-[1px] w-full rounded-[15px] bg-gradient-to-r from-pink-300 to-blue-300 flex flex-col items-center mt-[35px] drop-shadow-md">
+                            <div class="flex items-center flex-col">
+                                <img src="./media/Tanzania-2300w_1_2.png" alt="Photo"
+                                    class="rounded-[150px] w-[45px] h-[45px] mt-[5px]">
+                                <span class="text-[15px] font-bold text-white">Семечкин Петя</span>
+                            </div>
+                            <div class="max-w-[120px] h-[1px] bg-gray-200 w-full my-[5px]"></div>
+                            <div class="flex ">
+                                <span class="text-white font-medium text-[20px]">Супер сервис , дешево</span>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[35px] font-bold mt-[35px]  text-white drop-shadow-xl">
+                            Цены</p>
+                        <div
+                            class="max-w-[300px] h-[120px] border-[1px] w-full rounded-[15px] bg-gradient-to-r from-pink-300 to-blue-300 flex flex-col items-center mt-[35px]">
+                            <div class="flex items-center flex-col">
+                                <img src="./media/car1.png" alt="Photo" class="w-[70px] mt-[5px]">
+                                <span class="text-[15px] font-bold text-white">kia</span>
+                            </div>
+                            <div class="max-w-[120px] h-[1px] bg-gray-200 w-full my-[5px]"></div>
+                            <div class="flex ">
+                                <span class="text-white font-medium text-[20px]">1200</span>
+                            </div>
+                        </div>
+                        <div
+                            class="max-w-[300px] h-[120px] border-[1px] w-full rounded-[15px] bg-gradient-to-r from-pink-300 to-blue-300 flex flex-col items-center mt-[35px]">
+                            <div class="flex items-center flex-col">
+                                <img src="./media/car2.png" alt="Photo" class="w-[70px] mt-[5px]">
+                                <span class="text-[15px] font-bold text-white">Lada</span>
+                            </div>
+                            <div class="max-w-[120px] h-[1px] bg-gray-200 w-full my-[5px]"></div>
+                            <div class="flex ">
+                                <span class="text-white font-medium text-[20px]">1100</span>
+                            </div>
+                        </div>
+                        <div class="h-[120px]"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex justify-center">
+                <div class="w-[800px] h-[2px] bg-gray-200"></div>
+            </div>
+            <div class="w-full flex flex-col items-center bg-gradient-to-r from-pink-300 to-blue-300 mt-[80px]">
+                <p
+                    class="text-[35px] font-bold  text-white drop-shadow-xl">
+                    Найти автомобиль</p>
+                <div class="flex flex-col mt-[80px] md:flex-row">
+                    <div class="flex">
+                        <div class="w-[120px] h-[40px] border-[1px] flex items-center justify-center">
+                            <input type="text" placeholder="Откуда" class="max-w-[117px] h-[38px]" name="from">
+                        </div>
+                        <div class="w-[120px] h-[40px] border-[1px] flex items-center justify-center">
+                            <input type="text" placeholder="Дата" class="max-w-[117px] h-[38px]" name="from">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-[120px] h-[40px] border-[1px] flex items-center justify-center">
+                            <input type="text" placeholder="Марка" class="max-w-[117px] h-[38px]" name="from">
+                        </div>
+                        <div
+                            class="w-[120px] h-[40px] border-[1px] flex items-center justify-center  cursor-pointer hover:text-gray-300">
+                            <span class="text-[15px] text-white hover:text-gray-300 duration-200">Найти</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full bg-gradient-to-r from-pink-300 to-blue-300 justify-center mt-[80px] flex-wrap">
+                <div
+                    class="max-w-[230px] h-[280px] w-full border-[1px] rounded-[25px] flex flex-col items-center bg-gradient-to-r from-pink-300 to-blue-300">
+                    <img src="./media/Tanzania-2300w_1_1.png" alt="Car" class="rounded-[25px]">
+                    <span class="text-white font-bold mt-[25px] text-[25px]">С нами быстрее</span>
+                    <span class="text-gray-300 font-bold mt-[10px] text-[15px]">Для тех кто работает</span>
+                    <button
+                        class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] mt-[7px]">Подробнее</button>
+                </div>
+                <div
+                    class="max-w-[230px] h-[280px] w-full border-[1px] rounded-[25px] flex flex-col items-center bg-gradient-to-r from-pink-300 to-blue-300 mx-[0px]  md:mx-[25px] mt-[25px] md:mt-[0px]">
+                    <img src="./media/Tanzania-2300w_1_2.png" alt="Car" class="rounded-[25px]">
+                    <span class="text-white font-bold mt-[25px] text-[25px]">С нами лучше</span>
+                    <span class="text-gray-300 font-bold mt-[10px] text-[15px]">Больше скидок для вас</span>
+                    <button
+                        class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] mt-[7px]">Подробнее</button>
+                </div>
+                <div
+                    class="max-w-[230px] h-[280px] w-full border-[1px] rounded-[25px] flex flex-col items-center bg-gradient-to-r from-pink-300 to-blue-300 mt-[25px] md:mt-[0px]">
+                    <img src="./media/Tanzania-2300w_1_1.png" alt="Car" class="rounded-[25px]">
+                    <span class="text-white font-bold mt-[25px] text-[25px]">Кто тут есть?</span>
+                    <span class="text-gray-300 font-bold mt-[10px] text-[15px]">Скидки скидки</span>
+                    <button
+                        class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] mt-[7px]">Подробнее</button>
+                </div>
+            </div>
+            <div class="w-full flex justify-center mt-[150px] bg-cover bg-fixed "
+                style="background-image: url(./media/plan-road-trip-tips-ideas_1.png);">
+                <div
+                    class="flex max-w-[400px] h-[200px] border-[1px] w-full rounded-[25px] my-[20px] bg-white items-center flex-col justify-center">
+                    <input type="text" placeholder="  Введи почту" class="h-[25px] border-[2px] rounded-[25px]">
+                    <button
+                        class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold bg-gradient-to-r from-pink-300 to-blue-300 mt-[15px]">Подписаться</button>
+                </div>
+            </div>
+        </main>
+        <footer class="w-full flex justify-around mt-[90px] mb-[15px] scale-[0.8] md:scale-[1]">
+            <nav class="flex gap-[15px]">
+                <a href="#" class="textHeader text-black">Телефон 8 (800) 555-35-35 </a>
+                <a href="#" class="textHeader text-black">Акции</a>
+                <a href="#" class="textHeader text-black">Регистрация</a>
+                <a href="#" class="textHeader text-black">Личный Кабинет</a>
+                <a href="#" class="textHeader text-black">Поиск</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+       @layer utilities {
+          .hideF{
+            overflow: hidden;
+          }
+        }
+        @layer base {
+            *{
+                @apply m-0 p-0 box-border;
+            }
+        }
+        @layer components {
+            .wrapper{
+            @apply min-h-full w-full flex flex-col hideF;
+          }
+          .textHeader{
+            @apply text-[15px] font-medium text-white;
+          }
+        }
+      </style>
+    <title>User</title>
+</head>
+
+<body class="bg-gradient-to-r from-pink-300 to-blue-300">
+    <div class="wrapper">
+        <header class="header">
+            <div class="flex justify-around w-full bg-black items-center">
+                <div class="flex items-center">
+                    <span class="text-[25px] font-bold text-white cursor-pointer">D</span>
+                    <nav class="flex gap-[15px] ml-[25px] scale-[0.8] md:scale-[1]">
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Поиск</a>
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Акции</a>
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Личный кабинет</a>
+                        <div class="flex md:hidden">
+                        <a href="#" class="textHeader hover:text-gray-300 duration-200 text-[12px] sm:text-[15px]">Регистрация</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#"
+                        class="py-[5px] px-[15px]  bg-gradient-to-r from-pink-300 to-blue-300 rounded-[15px] textHeader font-medium hover:text-gray-300 duration-200">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main
+            class="flex w-full h-screen bg-gradient-to-r from-pink-300 to-blue-300 items-center justify-center mt-[32px] flex-col ">
+            <div
+                class="max-w-[400px] flex w-full h-[500px] bg-gradient-to-r from-orange-300 to-pink-300 rounded-[25px] drop-shadow-xl border-[1px] items-center flex-col items-center">
+                <span
+                    class="text-[25px] font-bold text-white mt-[25px] py-[5px] px-[10px] border-[2px] rounded-[15px]">Широков
+                    Кирилл</span>
+                <span class="text-[15px] font-bold text-white mt-[25px]">Количество бронирований: 0</span>
+                <span class="text-[15px] font-bold text-white mt-[25px]">Количество бон-баллов: 212</span>
+
+                <button
+                    class="rounded-[25px] py-[5px] px-[25px] drop-shadow-md text-white font-bold border-[1px] mt-[50px] bg-gradient-to-r from-red-300 to-blue-300 hover:text-gray-300 duration-200">Выйти</button>
+
+            </div>
+        </main>
+        <div class="h-[100px] bg-gradient-to-r from-pink-300 to-blue-300"></div>
+        <footer class="w-full flex justify-around mt-[120px] mb-[15px] scale-[0.8] md:scale-[1]">
+            <nav class="flex gap-[15px]">
+                <a href="#" class="textHeader text-black">Телефон 8 (800) 555-35-35 </a>
+                <a href="#" class="textHeader text-black">Акции</a>
+                <a href="#" class="textHeader text-black">Регистрация</a>
+                <a href="#" class="textHeader text-black">Личный Кабинет</a>
+                <a href="#" class="textHeader text-black">Поиск</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/Head.js"></script>
+</body>
+
+</html>
